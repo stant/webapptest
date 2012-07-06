@@ -10,7 +10,12 @@ import java.sql.Statement;
  * @author rconklin
  */
 public class DatabaseUtil {
-	public static void initDB() {
+
+        public static String PHONEBOOK_TABLE_NAME = "NAME";
+        public static String PHONEBOOK_TABLE_PHONENUMBER = "PHONENUMBER";
+        public static String PHONEBOOK_TABLE_ADDRESS = "ADDRESS";
+
+            public static void initDB() {
 		try {
 			Connection cn = getConnection();
 			Statement stmt = cn.createStatement();
